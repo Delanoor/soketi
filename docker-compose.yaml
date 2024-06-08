@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  soketi:
+    image: quay.io/soketi/soketi:1.4-16-debian
+    ports:
+      - "6001:6001"
+    volumes:
+      - ./config/config.json:/app/bin/config.json:ro
+    command:
+      ["node", "/app/bin/server.js", "start", "--config=/app/bin/config.json"]
+    environment:
+      - SOKETI_DEBUG= '1'
