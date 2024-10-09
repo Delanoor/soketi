@@ -80,5 +80,3 @@ terraform/.terraformrc
 terraform/terraform.rc
 terraform/.terraform.lock.hcl
 
-
-config
